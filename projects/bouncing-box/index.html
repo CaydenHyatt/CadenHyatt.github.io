@@ -78,10 +78,18 @@
             /* Your Code to Increase positionX by 10 HERE */
              positionX = positionX + speed;
              moveBoxTo(positionX)
-			 if (conditionIsTrue) {
-               
-}
+			 if (positionX > boardWidth) {
+               speed = -speed;
+				}
+			if (positionX < 0){
+				speed = -speed;
+
+		    
+
 			}
+			}
+
+
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
 			it should increase the points total, increase the speed, and move the box to
@@ -93,13 +101,14 @@
                 points = points + 1;
 
 				speed = speed + 3;
-
+                
+				}
 				changeBoxText(points);
 			}
 				
 
 
-		})();
+		)();
 	</script>
 </body>
 </html>
